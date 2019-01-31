@@ -1,0 +1,627 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 50;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		0426315921E86928000D28BB /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 0426315821E86928000D28BB /* AppDelegate.m */; };
+		0426315C21E86928000D28BB /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 0426315B21E86928000D28BB /* ViewController.m */; };
+		0426315F21E86928000D28BB /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0426315D21E86928000D28BB /* Main.storyboard */; };
+		0426316121E8692B000D28BB /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 0426316021E8692B000D28BB /* Assets.xcassets */; };
+		0426316421E8692B000D28BB /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0426316221E8692B000D28BB /* LaunchScreen.storyboard */; };
+		0426316721E8692B000D28BB /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 0426316621E8692B000D28BB /* main.m */; };
+		0426317121E8692B000D28BB /* ZFPhotoPickerKitTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 0426317021E8692B000D28BB /* ZFPhotoPickerKitTests.m */; };
+		0426319521E86942000D28BB /* NSLayoutConstraint+MASDebugAdditions.m in Sources */ = {isa = PBXBuildFile; fileRef = 0426317D21E86942000D28BB /* NSLayoutConstraint+MASDebugAdditions.m */; };
+		0426319621E86942000D28BB /* ViewController+MASAdditions.m in Sources */ = {isa = PBXBuildFile; fileRef = 0426318621E86942000D28BB /* ViewController+MASAdditions.m */; };
+		0426319721E86942000D28BB /* MASCompositeConstraint.m in Sources */ = {isa = PBXBuildFile; fileRef = 0426318A21E86942000D28BB /* MASCompositeConstraint.m */; };
+		0426319821E86942000D28BB /* MASConstraintMaker.m in Sources */ = {isa = PBXBuildFile; fileRef = 0426318B21E86942000D28BB /* MASConstraintMaker.m */; };
+		0426319921E86942000D28BB /* MASLayoutConstraint.m in Sources */ = {isa = PBXBuildFile; fileRef = 0426318C21E86942000D28BB /* MASLayoutConstraint.m */; };
+		0426319A21E86942000D28BB /* NSArray+MASAdditions.m in Sources */ = {isa = PBXBuildFile; fileRef = 0426318D21E86942000D28BB /* NSArray+MASAdditions.m */; };
+		0426319B21E86942000D28BB /* View+MASAdditions.m in Sources */ = {isa = PBXBuildFile; fileRef = 0426318E21E86942000D28BB /* View+MASAdditions.m */; };
+		0426319C21E86942000D28BB /* MASConstraint.m in Sources */ = {isa = PBXBuildFile; fileRef = 0426319121E86942000D28BB /* MASConstraint.m */; };
+		0426319D21E86942000D28BB /* MASViewConstraint.m in Sources */ = {isa = PBXBuildFile; fileRef = 0426319321E86942000D28BB /* MASViewConstraint.m */; };
+		0426319E21E86942000D28BB /* MASViewAttribute.m in Sources */ = {isa = PBXBuildFile; fileRef = 0426319421E86942000D28BB /* MASViewAttribute.m */; };
+		042631B921E86950000D28BB /* ZFAlbumModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 042631A021E86950000D28BB /* ZFAlbumModel.m */; };
+		042631BA21E86950000D28BB /* ZFPhotoManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 042631A121E86950000D28BB /* ZFPhotoManager.m */; };
+		042631BB21E86950000D28BB /* ZFAlbumCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 042631A321E86950000D28BB /* ZFAlbumCell.m */; };
+		042631BC21E86950000D28BB /* ZFPhotoPreviewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 042631A421E86950000D28BB /* ZFPhotoPreviewController.m */; };
+		042631BD21E86950000D28BB /* ZFPhotoCollectionController.m in Sources */ = {isa = PBXBuildFile; fileRef = 042631A621E86950000D28BB /* ZFPhotoCollectionController.m */; };
+		042631BE21E86950000D28BB /* ZFBottomBar.m in Sources */ = {isa = PBXBuildFile; fileRef = 042631A721E86950000D28BB /* ZFBottomBar.m */; };
+		042631BF21E86950000D28BB /* UIView+ZFAnimations.m in Sources */ = {isa = PBXBuildFile; fileRef = 042631A821E86950000D28BB /* UIView+ZFAnimations.m */; };
+		042631C021E86950000D28BB /* ZFAssetCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 042631AE21E86950000D28BB /* ZFAssetCell.m */; };
+		042631C121E86950000D28BB /* ZFPhotoPickerController.m in Sources */ = {isa = PBXBuildFile; fileRef = 042631B021E86950000D28BB /* ZFPhotoPickerController.m */; };
+		042631C221E86950000D28BB /* ZFPhotoPreviewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 042631B221E86950000D28BB /* ZFPhotoPreviewCell.m */; };
+		042631C421E86950000D28BB /* ZFAssetModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 042631B621E86950000D28BB /* ZFAssetModel.m */; };
+		042631C621E86A19000D28BB /* PhotoPickerKit.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 042631C521E86A19000D28BB /* PhotoPickerKit.xcassets */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		0426316D21E8692B000D28BB /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 0426314C21E86927000D28BB /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 0426315321E86927000D28BB;
+			remoteInfo = ZFPhotoPickerKit;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		0426315421E86927000D28BB /* ZFPhotoPickerKit.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ZFPhotoPickerKit.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		0426315721E86928000D28BB /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
+		0426315821E86928000D28BB /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
+		0426315A21E86928000D28BB /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
+		0426315B21E86928000D28BB /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
+		0426315E21E86928000D28BB /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		0426316021E8692B000D28BB /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		0426316321E8692B000D28BB /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		0426316521E8692B000D28BB /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		0426316621E8692B000D28BB /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		0426316C21E8692B000D28BB /* ZFPhotoPickerKitTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = ZFPhotoPickerKitTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		0426317021E8692B000D28BB /* ZFPhotoPickerKitTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ZFPhotoPickerKitTests.m; sourceTree = "<group>"; };
+		0426317221E8692B000D28BB /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		0426317C21E86942000D28BB /* MASCompositeConstraint.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MASCompositeConstraint.h; sourceTree = "<group>"; };
+		0426317D21E86942000D28BB /* NSLayoutConstraint+MASDebugAdditions.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSLayoutConstraint+MASDebugAdditions.m"; sourceTree = "<group>"; };
+		0426317E21E86942000D28BB /* MASConstraint+Private.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "MASConstraint+Private.h"; sourceTree = "<group>"; };
+		0426317F21E86942000D28BB /* MASLayoutConstraint.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MASLayoutConstraint.h; sourceTree = "<group>"; };
+		0426318021E86942000D28BB /* NSArray+MASShorthandAdditions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSArray+MASShorthandAdditions.h"; sourceTree = "<group>"; };
+		0426318121E86942000D28BB /* MASConstraintMaker.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MASConstraintMaker.h; sourceTree = "<group>"; };
+		0426318221E86942000D28BB /* View+MASAdditions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "View+MASAdditions.h"; sourceTree = "<group>"; };
+		0426318321E86942000D28BB /* NSArray+MASAdditions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSArray+MASAdditions.h"; sourceTree = "<group>"; };
+		0426318421E86942000D28BB /* MASUtilities.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MASUtilities.h; sourceTree = "<group>"; };
+		0426318521E86942000D28BB /* MASViewAttribute.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MASViewAttribute.h; sourceTree = "<group>"; };
+		0426318621E86942000D28BB /* ViewController+MASAdditions.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "ViewController+MASAdditions.m"; sourceTree = "<group>"; };
+		0426318721E86942000D28BB /* MASViewConstraint.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MASViewConstraint.h; sourceTree = "<group>"; };
+		0426318821E86942000D28BB /* MASConstraint.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MASConstraint.h; sourceTree = "<group>"; };
+		0426318921E86942000D28BB /* NSLayoutConstraint+MASDebugAdditions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSLayoutConstraint+MASDebugAdditions.h"; sourceTree = "<group>"; };
+		0426318A21E86942000D28BB /* MASCompositeConstraint.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MASCompositeConstraint.m; sourceTree = "<group>"; };
+		0426318B21E86942000D28BB /* MASConstraintMaker.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MASConstraintMaker.m; sourceTree = "<group>"; };
+		0426318C21E86942000D28BB /* MASLayoutConstraint.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MASLayoutConstraint.m; sourceTree = "<group>"; };
+		0426318D21E86942000D28BB /* NSArray+MASAdditions.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSArray+MASAdditions.m"; sourceTree = "<group>"; };
+		0426318E21E86942000D28BB /* View+MASAdditions.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "View+MASAdditions.m"; sourceTree = "<group>"; };
+		0426318F21E86942000D28BB /* View+MASShorthandAdditions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "View+MASShorthandAdditions.h"; sourceTree = "<group>"; };
+		0426319021E86942000D28BB /* Masonry.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Masonry.h; sourceTree = "<group>"; };
+		0426319121E86942000D28BB /* MASConstraint.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MASConstraint.m; sourceTree = "<group>"; };
+		0426319221E86942000D28BB /* ViewController+MASAdditions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "ViewController+MASAdditions.h"; sourceTree = "<group>"; };
+		0426319321E86942000D28BB /* MASViewConstraint.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MASViewConstraint.m; sourceTree = "<group>"; };
+		0426319421E86942000D28BB /* MASViewAttribute.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MASViewAttribute.m; sourceTree = "<group>"; };
+		042631A021E86950000D28BB /* ZFAlbumModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ZFAlbumModel.m; sourceTree = "<group>"; };
+		042631A121E86950000D28BB /* ZFPhotoManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ZFPhotoManager.m; sourceTree = "<group>"; };
+		042631A221E86950000D28BB /* ZFAssetCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ZFAssetCell.h; sourceTree = "<group>"; };
+		042631A321E86950000D28BB /* ZFAlbumCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ZFAlbumCell.m; sourceTree = "<group>"; };
+		042631A421E86950000D28BB /* ZFPhotoPreviewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ZFPhotoPreviewController.m; sourceTree = "<group>"; };
+		042631A521E86950000D28BB /* ZFPhotoPickerController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ZFPhotoPickerController.h; sourceTree = "<group>"; };
+		042631A621E86950000D28BB /* ZFPhotoCollectionController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ZFPhotoCollectionController.m; sourceTree = "<group>"; };
+		042631A721E86950000D28BB /* ZFBottomBar.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ZFBottomBar.m; sourceTree = "<group>"; };
+		042631A821E86950000D28BB /* UIView+ZFAnimations.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIView+ZFAnimations.m"; sourceTree = "<group>"; };
+		042631A921E86950000D28BB /* ZFAssetModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ZFAssetModel.h; sourceTree = "<group>"; };
+		042631AB21E86950000D28BB /* ZFPhotoPreviewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ZFPhotoPreviewCell.h; sourceTree = "<group>"; };
+		042631AC21E86950000D28BB /* ZFAlbumModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ZFAlbumModel.h; sourceTree = "<group>"; };
+		042631AD21E86950000D28BB /* ZFAlbumCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ZFAlbumCell.h; sourceTree = "<group>"; };
+		042631AE21E86950000D28BB /* ZFAssetCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ZFAssetCell.m; sourceTree = "<group>"; };
+		042631AF21E86950000D28BB /* ZFPhotoManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ZFPhotoManager.h; sourceTree = "<group>"; };
+		042631B021E86950000D28BB /* ZFPhotoPickerController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ZFPhotoPickerController.m; sourceTree = "<group>"; };
+		042631B121E86950000D28BB /* ZFPhotoPreviewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ZFPhotoPreviewController.h; sourceTree = "<group>"; };
+		042631B221E86950000D28BB /* ZFPhotoPreviewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ZFPhotoPreviewCell.m; sourceTree = "<group>"; };
+		042631B321E86950000D28BB /* ZFPhotoPickerDefine.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ZFPhotoPickerDefine.h; sourceTree = "<group>"; };
+		042631B521E86950000D28BB /* UIView+ZFAnimations.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIView+ZFAnimations.h"; sourceTree = "<group>"; };
+		042631B621E86950000D28BB /* ZFAssetModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ZFAssetModel.m; sourceTree = "<group>"; };
+		042631B721E86950000D28BB /* ZFBottomBar.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ZFBottomBar.h; sourceTree = "<group>"; };
+		042631B821E86950000D28BB /* ZFPhotoCollectionController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ZFPhotoCollectionController.h; sourceTree = "<group>"; };
+		042631C521E86A19000D28BB /* PhotoPickerKit.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = PhotoPickerKit.xcassets; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		0426315121E86927000D28BB /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		0426316921E8692B000D28BB /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		0426314B21E86927000D28BB = {
+			isa = PBXGroup;
+			children = (
+				0426315621E86927000D28BB /* ZFPhotoPickerKit */,
+				0426316F21E8692B000D28BB /* ZFPhotoPickerKitTests */,
+				0426315521E86927000D28BB /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		0426315521E86927000D28BB /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				0426315421E86927000D28BB /* ZFPhotoPickerKit.app */,
+				0426316C21E8692B000D28BB /* ZFPhotoPickerKitTests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		0426315621E86927000D28BB /* ZFPhotoPickerKit */ = {
+			isa = PBXGroup;
+			children = (
+				0426315721E86928000D28BB /* AppDelegate.h */,
+				0426315821E86928000D28BB /* AppDelegate.m */,
+				0426315A21E86928000D28BB /* ViewController.h */,
+				0426315B21E86928000D28BB /* ViewController.m */,
+				0426319F21E86950000D28BB /* ZFPhotoPickerKit */,
+				0426317B21E86942000D28BB /* Masonry */,
+				0426315D21E86928000D28BB /* Main.storyboard */,
+				0426316021E8692B000D28BB /* Assets.xcassets */,
+				0426316221E8692B000D28BB /* LaunchScreen.storyboard */,
+				0426316521E8692B000D28BB /* Info.plist */,
+				0426316621E8692B000D28BB /* main.m */,
+			);
+			path = ZFPhotoPickerKit;
+			sourceTree = "<group>";
+		};
+		0426316F21E8692B000D28BB /* ZFPhotoPickerKitTests */ = {
+			isa = PBXGroup;
+			children = (
+				0426317021E8692B000D28BB /* ZFPhotoPickerKitTests.m */,
+				0426317221E8692B000D28BB /* Info.plist */,
+			);
+			path = ZFPhotoPickerKitTests;
+			sourceTree = "<group>";
+		};
+		0426317B21E86942000D28BB /* Masonry */ = {
+			isa = PBXGroup;
+			children = (
+				0426317C21E86942000D28BB /* MASCompositeConstraint.h */,
+				0426317D21E86942000D28BB /* NSLayoutConstraint+MASDebugAdditions.m */,
+				0426317E21E86942000D28BB /* MASConstraint+Private.h */,
+				0426317F21E86942000D28BB /* MASLayoutConstraint.h */,
+				0426318021E86942000D28BB /* NSArray+MASShorthandAdditions.h */,
+				0426318121E86942000D28BB /* MASConstraintMaker.h */,
+				0426318221E86942000D28BB /* View+MASAdditions.h */,
+				0426318321E86942000D28BB /* NSArray+MASAdditions.h */,
+				0426318421E86942000D28BB /* MASUtilities.h */,
+				0426318521E86942000D28BB /* MASViewAttribute.h */,
+				0426318621E86942000D28BB /* ViewController+MASAdditions.m */,
+				0426318721E86942000D28BB /* MASViewConstraint.h */,
+				0426318821E86942000D28BB /* MASConstraint.h */,
+				0426318921E86942000D28BB /* NSLayoutConstraint+MASDebugAdditions.h */,
+				0426318A21E86942000D28BB /* MASCompositeConstraint.m */,
+				0426318B21E86942000D28BB /* MASConstraintMaker.m */,
+				0426318C21E86942000D28BB /* MASLayoutConstraint.m */,
+				0426318D21E86942000D28BB /* NSArray+MASAdditions.m */,
+				0426318E21E86942000D28BB /* View+MASAdditions.m */,
+				0426318F21E86942000D28BB /* View+MASShorthandAdditions.h */,
+				0426319021E86942000D28BB /* Masonry.h */,
+				0426319121E86942000D28BB /* MASConstraint.m */,
+				0426319221E86942000D28BB /* ViewController+MASAdditions.h */,
+				0426319321E86942000D28BB /* MASViewConstraint.m */,
+				0426319421E86942000D28BB /* MASViewAttribute.m */,
+			);
+			path = Masonry;
+			sourceTree = "<group>";
+		};
+		0426319F21E86950000D28BB /* ZFPhotoPickerKit */ = {
+			isa = PBXGroup;
+			children = (
+				042631B321E86950000D28BB /* ZFPhotoPickerDefine.h */,
+				042631AF21E86950000D28BB /* ZFPhotoManager.h */,
+				042631A121E86950000D28BB /* ZFPhotoManager.m */,
+				042631A521E86950000D28BB /* ZFPhotoPickerController.h */,
+				042631B021E86950000D28BB /* ZFPhotoPickerController.m */,
+				042631B821E86950000D28BB /* ZFPhotoCollectionController.h */,
+				042631A621E86950000D28BB /* ZFPhotoCollectionController.m */,
+				042631B121E86950000D28BB /* ZFPhotoPreviewController.h */,
+				042631A421E86950000D28BB /* ZFPhotoPreviewController.m */,
+				042631AB21E86950000D28BB /* ZFPhotoPreviewCell.h */,
+				042631B221E86950000D28BB /* ZFPhotoPreviewCell.m */,
+				042631AD21E86950000D28BB /* ZFAlbumCell.h */,
+				042631A321E86950000D28BB /* ZFAlbumCell.m */,
+				042631A221E86950000D28BB /* ZFAssetCell.h */,
+				042631AE21E86950000D28BB /* ZFAssetCell.m */,
+				042631A921E86950000D28BB /* ZFAssetModel.h */,
+				042631B621E86950000D28BB /* ZFAssetModel.m */,
+				042631AC21E86950000D28BB /* ZFAlbumModel.h */,
+				042631A021E86950000D28BB /* ZFAlbumModel.m */,
+				042631B721E86950000D28BB /* ZFBottomBar.h */,
+				042631A721E86950000D28BB /* ZFBottomBar.m */,
+				042631B521E86950000D28BB /* UIView+ZFAnimations.h */,
+				042631A821E86950000D28BB /* UIView+ZFAnimations.m */,
+				042631C521E86A19000D28BB /* PhotoPickerKit.xcassets */,
+			);
+			path = ZFPhotoPickerKit;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		0426315321E86927000D28BB /* ZFPhotoPickerKit */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 0426317521E8692B000D28BB /* Build configuration list for PBXNativeTarget "ZFPhotoPickerKit" */;
+			buildPhases = (
+				0426315021E86927000D28BB /* Sources */,
+				0426315121E86927000D28BB /* Frameworks */,
+				0426315221E86927000D28BB /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = ZFPhotoPickerKit;
+			productName = ZFPhotoPickerKit;
+			productReference = 0426315421E86927000D28BB /* ZFPhotoPickerKit.app */;
+			productType = "com.apple.product-type.application";
+		};
+		0426316B21E8692B000D28BB /* ZFPhotoPickerKitTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 0426317821E8692B000D28BB /* Build configuration list for PBXNativeTarget "ZFPhotoPickerKitTests" */;
+			buildPhases = (
+				0426316821E8692B000D28BB /* Sources */,
+				0426316921E8692B000D28BB /* Frameworks */,
+				0426316A21E8692B000D28BB /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				0426316E21E8692B000D28BB /* PBXTargetDependency */,
+			);
+			name = ZFPhotoPickerKitTests;
+			productName = ZFPhotoPickerKitTests;
+			productReference = 0426316C21E8692B000D28BB /* ZFPhotoPickerKitTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		0426314C21E86927000D28BB /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 1010;
+				ORGANIZATIONNAME = kang;
+				TargetAttributes = {
+					0426315321E86927000D28BB = {
+						CreatedOnToolsVersion = 10.1;
+					};
+					0426316B21E8692B000D28BB = {
+						CreatedOnToolsVersion = 10.1;
+						TestTargetID = 0426315321E86927000D28BB;
+					};
+				};
+			};
+			buildConfigurationList = 0426314F21E86927000D28BB /* Build configuration list for PBXProject "ZFPhotoPickerKit" */;
+			compatibilityVersion = "Xcode 9.3";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 0426314B21E86927000D28BB;
+			productRefGroup = 0426315521E86927000D28BB /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				0426315321E86927000D28BB /* ZFPhotoPickerKit */,
+				0426316B21E8692B000D28BB /* ZFPhotoPickerKitTests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		0426315221E86927000D28BB /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				0426316421E8692B000D28BB /* LaunchScreen.storyboard in Resources */,
+				0426316121E8692B000D28BB /* Assets.xcassets in Resources */,
+				0426315F21E86928000D28BB /* Main.storyboard in Resources */,
+				042631C621E86A19000D28BB /* PhotoPickerKit.xcassets in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		0426316A21E8692B000D28BB /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		0426315021E86927000D28BB /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				0426319821E86942000D28BB /* MASConstraintMaker.m in Sources */,
+				042631C021E86950000D28BB /* ZFAssetCell.m in Sources */,
+				0426315C21E86928000D28BB /* ViewController.m in Sources */,
+				0426319621E86942000D28BB /* ViewController+MASAdditions.m in Sources */,
+				042631C421E86950000D28BB /* ZFAssetModel.m in Sources */,
+				0426319D21E86942000D28BB /* MASViewConstraint.m in Sources */,
+				042631C221E86950000D28BB /* ZFPhotoPreviewCell.m in Sources */,
+				0426316721E8692B000D28BB /* main.m in Sources */,
+				0426319921E86942000D28BB /* MASLayoutConstraint.m in Sources */,
+				0426319C21E86942000D28BB /* MASConstraint.m in Sources */,
+				042631C121E86950000D28BB /* ZFPhotoPickerController.m in Sources */,
+				0426319A21E86942000D28BB /* NSArray+MASAdditions.m in Sources */,
+				0426315921E86928000D28BB /* AppDelegate.m in Sources */,
+				042631BB21E86950000D28BB /* ZFAlbumCell.m in Sources */,
+				042631BA21E86950000D28BB /* ZFPhotoManager.m in Sources */,
+				0426319721E86942000D28BB /* MASCompositeConstraint.m in Sources */,
+				0426319B21E86942000D28BB /* View+MASAdditions.m in Sources */,
+				042631BC21E86950000D28BB /* ZFPhotoPreviewController.m in Sources */,
+				042631BE21E86950000D28BB /* ZFBottomBar.m in Sources */,
+				042631BD21E86950000D28BB /* ZFPhotoCollectionController.m in Sources */,
+				042631B921E86950000D28BB /* ZFAlbumModel.m in Sources */,
+				0426319521E86942000D28BB /* NSLayoutConstraint+MASDebugAdditions.m in Sources */,
+				0426319E21E86942000D28BB /* MASViewAttribute.m in Sources */,
+				042631BF21E86950000D28BB /* UIView+ZFAnimations.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		0426316821E8692B000D28BB /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				0426317121E8692B000D28BB /* ZFPhotoPickerKitTests.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		0426316E21E8692B000D28BB /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 0426315321E86927000D28BB /* ZFPhotoPickerKit */;
+			targetProxy = 0426316D21E8692B000D28BB /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		0426315D21E86928000D28BB /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				0426315E21E86928000D28BB /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		0426316221E8692B000D28BB /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				0426316321E8692B000D28BB /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		0426317321E8692B000D28BB /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 12.1;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+			};
+			name = Debug;
+		};
+		0426317421E8692B000D28BB /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 12.1;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SDKROOT = iphoneos;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		0426317621E8692B000D28BB /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Manual;
+				DEVELOPMENT_TEAM = CKBKB7T5NP;
+				INFOPLIST_FILE = ZFPhotoPickerKit/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.jdj.jyd;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = JYDDev;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		0426317721E8692B000D28BB /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Manual;
+				DEVELOPMENT_TEAM = "";
+				INFOPLIST_FILE = ZFPhotoPickerKit/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.jdj.jyd;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = "";
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+		0426317921E8692B000D28BB /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				INFOPLIST_FILE = ZFPhotoPickerKitTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.jdj.jdmf.ZFPhotoPickerKitTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/ZFPhotoPickerKit.app/ZFPhotoPickerKit";
+			};
+			name = Debug;
+		};
+		0426317A21E8692B000D28BB /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				INFOPLIST_FILE = ZFPhotoPickerKitTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.jdj.jdmf.ZFPhotoPickerKitTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/ZFPhotoPickerKit.app/ZFPhotoPickerKit";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		0426314F21E86927000D28BB /* Build configuration list for PBXProject "ZFPhotoPickerKit" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				0426317321E8692B000D28BB /* Debug */,
+				0426317421E8692B000D28BB /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		0426317521E8692B000D28BB /* Build configuration list for PBXNativeTarget "ZFPhotoPickerKit" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				0426317621E8692B000D28BB /* Debug */,
+				0426317721E8692B000D28BB /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		0426317821E8692B000D28BB /* Build configuration list for PBXNativeTarget "ZFPhotoPickerKitTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				0426317921E8692B000D28BB /* Debug */,
+				0426317A21E8692B000D28BB /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 0426314C21E86927000D28BB /* Project object */;
+}
