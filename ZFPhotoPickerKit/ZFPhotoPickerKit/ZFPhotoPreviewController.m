@@ -33,8 +33,8 @@ static NSString * const kZFPhotoPreviewIdentifier = @"ZFPhotoPreviewCell";
     self.automaticallyAdjustsScrollViewInsets = NO;
     self.view.backgroundColor = [UIColor blackColor];
     
-    [self _setup];
-    [self _setupCollectionView];
+    [self setup];
+    [self setupCollectionView];
     
     // Do any additional setup after loading the view.
 }
@@ -64,14 +64,14 @@ static NSString * const kZFPhotoPreviewIdentifier = @"ZFPhotoPreviewCell";
 
 #pragma mark - Methods
 
-- (void)_setup {
+- (void)setup {
     [self.view addSubview:self.topBar];
     [self.view addSubview:self.bottomBar];
-    [self _updateTopBarStatus];
+    [self updateTopBarStatus];
     [self.bottomBar updateBottomBarWithAssets:self.selectedAssets];
 }
 
-- (void)_setupCollectionView {
+- (void)setupCollectionView {
     
     [self.collectionView registerClass:[ZFPhotoPreviewCell class] forCellWithReuseIdentifier:kZFPhotoPreviewIdentifier];
     self.collectionView.backgroundColor = [UIColor blackColor];
@@ -91,13 +91,13 @@ static NSString * const kZFPhotoPreviewIdentifier = @"ZFPhotoPreviewCell";
     if (self.stateButton.selected) {
         [self.selectedAssets removeObject:self.assets[self.currentIndex]];
         self.assets[self.currentIndex].selected = NO;
-        [self _updateTopBarStatus];
+        [self updateTopBarStatus];
     }else {
         ZFPhotoPickerController *pickerC = (ZFPhotoPickerController *)self.navigationController;
         if (self.selectedAssets.count < pickerC.maxCount) {
             self.assets[self.currentIndex].selected = YES;
             [self.selectedAssets addObject:self.assets[self.currentIndex]];
-            [self _updateTopBarStatus];
+            [self updateTopBarStatus];
             [UIView animationWithLayer:self.stateButton.layer];
         }else {
             //TODO 超过最大数量
@@ -108,12 +108,12 @@ static NSString * const kZFPhotoPreviewIdentifier = @"ZFPhotoPreviewCell";
     [self.bottomBar updateBottomBarWithAssets:self.selectedAssets];
 }
 
-- (void)_updateTopBarStatus {
+- (void)updateTopBarStatus {
     ZFAssetModel *asset = self.assets[self.currentIndex];
     self.stateButton.selected = asset.selected;
 }
 
-- (void)_setBarHidden:(BOOL)hidden animated:(BOOL)animated {
+- (void)setBarHidden:(BOOL)hidden animated:(BOOL)animated {
     if (!animated) {
         self.topBar.hidden = self.bottomBar.hidden = hidden;
         return;
@@ -133,7 +133,7 @@ static NSString * const kZFPhotoPreviewIdentifier = @"ZFPhotoPreviewCell";
 }
 
 - (void)scrollViewDidEndDecelerating:(UIScrollView *)scrollView {
-    [self _updateTopBarStatus];
+    [self updateTopBarStatus];
 }
 
 
@@ -154,7 +154,7 @@ static NSString * const kZFPhotoPreviewIdentifier = @"ZFPhotoPreviewCell";
     __weak typeof(*&self) wSelf = self;
     [previewCell setSingleTapBlock:^{
         __weak typeof(*&self) self = wSelf;
-        [self _setBarHidden:!self.topBar.hidden animated:YES];
+        [self setBarHidden:!self.topBar.hidden animated:YES];
     }];
     return previewCell;
 }

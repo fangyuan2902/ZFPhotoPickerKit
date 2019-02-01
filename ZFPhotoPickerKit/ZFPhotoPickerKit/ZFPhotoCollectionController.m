@@ -36,13 +36,13 @@ static NSString * const kZFAssetCellIdentifier = @"ZFAssetCell";
     self.navigationItem.leftBarButtonItem = backButton;
     
     self.navigationItem.title = self.album.name;
-    self.navigationItem.rightBarButtonItem = [[UIBarButtonItem alloc] initWithTitle:@"取消" style:UIBarButtonItemStylePlain target:self action:@selector(_handleCancelAction)];
+    self.navigationItem.rightBarButtonItem = [[UIBarButtonItem alloc] initWithTitle:@"取消" style:UIBarButtonItemStylePlain target:self action:@selector(handleCancelAction)];
     
     
     self.selectedAssets = [NSMutableArray array];
     self.scrollBottom = YES;
     
-    [self _setupCollectionView];
+    [self setupCollectionView];
     __weak typeof(*&self) wSelf = self;
     [[ZFPhotoManager sharedManager] getAssetsFromResult:self.album.fetchResult pickingVideoEnable:[(ZFPhotoPickerController *)self.navigationController selectVideoEnable] completionBlock:^(NSArray<ZFAssetModel *> *assets) {
         __weak typeof(*&self) self = wSelf;
@@ -60,7 +60,7 @@ static NSString * const kZFAssetCellIdentifier = @"ZFAssetCell";
     if (self.assets.count > 0) {
         [self.navigationController popViewControllerAnimated:YES];
     } else {
-        [self _handleCancelAction];
+        [self handleCancelAction];
     }
     
 }
@@ -76,7 +76,7 @@ static NSString * const kZFAssetCellIdentifier = @"ZFAssetCell";
 
 #pragma mark - Methods
 
-- (void)_setupCollectionView {
+- (void)setupCollectionView {
     self.collectionView.backgroundColor = [UIColor whiteColor];
     self.collectionView.alwaysBounceHorizontal = NO;
     self.collectionView.contentInset = UIEdgeInsetsMake(4, 4, 54, 4);
@@ -94,7 +94,7 @@ static NSString * const kZFAssetCellIdentifier = @"ZFAssetCell";
     [self.view addSubview:self.bottomBar = bottomBar];
 }
 
-- (void)_handleCancelAction {
+- (void)handleCancelAction {
     [self.navigationController dismissViewControllerAnimated:YES completion:nil];
     ZFPhotoPickerController *photoPickerVC = (ZFPhotoPickerController *)self.navigationController;
     [photoPickerVC didCancelPickingPhoto];
