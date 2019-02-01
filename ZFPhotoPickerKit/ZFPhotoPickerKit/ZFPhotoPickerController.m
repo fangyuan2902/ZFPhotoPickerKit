@@ -7,9 +7,8 @@
 //
 
 #import "ZFPhotoPickerController.h"
-#import "ZFPhotoCollectionController.h"
 #import "ZFPhotoManager.h"
-#import "ZFAlbumCell.h"
+#import "ZFAlbumListViewController.h"
 
 @implementation ZFPhotoPickerController
 
@@ -19,7 +18,7 @@
 #pragma mark - ZFPhotoPickerController Life Cycle
 
 - (instancetype)initWithMaxCount:(NSUInteger)maxCount delegate:(id<ZFPhotoPickerControllerDelegate>)delegate {
-    ZFAlbumListController *albumListC = [[ZFAlbumListController alloc] init];
+    ZFAlbumListViewController *albumListC = [[ZFAlbumListViewController alloc] init];
     if (self = [super initWithRootViewController:albumListC]) {
         _photoPickerDelegate = delegate;
         _maxCount = maxCount ? : NSUIntegerMax;
@@ -31,9 +30,9 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(_setupUnAuthorizedTips:) name:@"Notification_SetupUnAuthorizedTips" object:nil];
-    [self _setupNavigationBarAppearance];
-    [self _setupUnAuthorizedTips:nil];
+    [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(setupUnAuthorizedTips:) name:@"NotificationSetupUnAuthorizedTips" object:nil];
+    [self setupNavigationBarAppearance];
+    [self setupUnAuthorizedTips:nil];
 }
 
 - (void)viewWillAppear:(BOOL)animated {
@@ -95,7 +94,7 @@
 /**
  *  设置当用户未授权访问照片时提示
  */
-- (void)_setupUnAuthorizedTips:(NSNotification *)noti {
+- (void)setupUnAuthorizedTips:(NSNotification *)noti {
     UILabel *tipsLabel = [self.view viewWithTag:10000];
     if (![[ZFPhotoManager sharedManager] hasAuthorized]) {
         if (tipsLabel == nil) {
@@ -112,7 +111,7 @@
             tipsLabel.text = [NSString stringWithFormat:@"请在%@的\"设置-隐私-照片\"选项中，\r允许%@访问你的手机相册。",[UIDevice currentDevice].model,appName];
             [self.view addSubview:tipsLabel];
             
-            UITapGestureRecognizer *tap = [[UITapGestureRecognizer alloc] initWithTarget:self action:@selector(_handleTipsTap)];
+            UITapGestureRecognizer *tap = [[UITapGestureRecognizer alloc] initWithTarget:self action:@selector(handleTipsTap)];
             [tipsLabel addGestureRecognizer:tap];
         }
     } else {
@@ -125,14 +124,14 @@
     }
 }
 
-- (void)_handleTipsTap {
+- (void)handleTipsTap {
     [[UIApplication sharedApplication] openURL:[NSURL URLWithString:UIApplicationOpenSettingsURLString]];
 }
 
 /**
  *  设置navigationBar的样式
  */
-- (void)_setupNavigationBarAppearance {
+- (void)setupNavigationBarAppearance {
     self.navigationBar.barStyle = UIBarStyleBlack;
     self.navigationBar.translucent = YES;
     
@@ -148,79 +147,5 @@
     [navigationBar setBarStyle:UIBarStyleBlackTranslucent];
 }
 
-
 @end
 
-@implementation ZFAlbumListController
-
-#pragma mark - ZFAlbumListController Life Cycle
-
-- (void)viewDidLoad {
-    [super viewDidLoad];
-    
-    self.navigationItem.title = @"照片";
-    self.navigationItem.rightBarButtonItem = [[UIBarButtonItem alloc] initWithTitle:@"取消" style:UIBarButtonItemStylePlain target:self action:@selector(_handleCancelAction)];
-    
-    [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(applicationBecomeActive:) name:UIApplicationDidBecomeActiveNotification object:nil];
-    
-    self.tableView.separatorStyle = UITableViewCellSeparatorStyleSingleLine;
-    self.tableView.tableFooterView = [[UIView alloc] init];
-    self.tableView.rowHeight = 70.0f;
-    [self.tableView registerClass:[ZFAlbumCell class] forCellReuseIdentifier:@"ZFAlbumCell"];
-    
-    [self loadData];
-}
-
-- (void)dealloc {
-    [[NSNotificationCenter defaultCenter] removeObserver:self name:UIApplicationDidBecomeActiveNotification object:nil];
-}
-
-- (void)loadData {
-    ZFPhotoPickerController *imagePickerVC = (ZFPhotoPickerController *)self.navigationController;
-    __weak typeof(*&self) wSelf = self;
-    [[ZFPhotoManager sharedManager] getAlbumsPickingVideoEnable:imagePickerVC.selectVideoEnable completionBlock:^(NSArray<ZFAlbumModel *> *albums) {
-        [[NSNotificationCenter defaultCenter] postNotificationName:@"Notification_SetupUnAuthorizedTips" object:[NSString stringWithFormat:@"%ld",(long)[albums count]]];
-        __weak typeof(*&self) self = wSelf;
-        self.albums = [NSArray arrayWithArray:albums];
-        [self.tableView reloadData];
-    }];
-}
-
-- (void)applicationBecomeActive:(NSNotification *)noti {
-    if (self.albums.count == 0) {
-        [self loadData];
-    }
-}
-
-#pragma mark - ZFAlbumListController Methods
-
-- (void)_handleCancelAction {
-    [self.navigationController dismissViewControllerAnimated:YES completion:nil];
-    ZFPhotoPickerController *photoPickerVC = (ZFPhotoPickerController *)self.navigationController;
-    [photoPickerVC didCancelPickingPhoto];
-    
-}
-
-
-#pragma mark - ZFAlbumListController UITableViewDataSource && UITableViewDelegate
-
-- (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
-    return self.albums.count;
-}
-
-- (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
-    
-    ZFAlbumCell *albumCell = [tableView dequeueReusableCellWithIdentifier:@"ZFAlbumCell"];
-    [albumCell configCellWithItem:self.albums[indexPath.row]];
-    return albumCell;
-    
-}
-
-- (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
-    ZFPhotoCollectionController *photoCollectionC = [[ZFPhotoCollectionController alloc] initWithCollectionViewLayout:[ZFPhotoCollectionController photoCollectionViewLayoutWithWidth:self.view.frame.size.width]];
-    photoCollectionC.album = self.albums[indexPath.row];
-    [self.navigationController pushViewController:photoCollectionC animated:YES];
-    [tableView deselectRowAtIndexPath:indexPath animated:YES];
-}
-
-@end

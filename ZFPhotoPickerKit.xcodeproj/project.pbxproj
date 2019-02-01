@@ -36,6 +36,7 @@
 		042631C221E86950000D28BB /* ZFPhotoPreviewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 042631B221E86950000D28BB /* ZFPhotoPreviewCell.m */; };
 		042631C421E86950000D28BB /* ZFAssetModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 042631B621E86950000D28BB /* ZFAssetModel.m */; };
 		042631C621E86A19000D28BB /* PhotoPickerKit.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 042631C521E86A19000D28BB /* PhotoPickerKit.xcassets */; };
+		04918D7E2203DAF9002FB5A4 /* ZFAlbumListViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 04918D7D2203DAF9002FB5A4 /* ZFAlbumListViewController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -111,6 +112,8 @@
 		042631B721E86950000D28BB /* ZFBottomBar.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ZFBottomBar.h; sourceTree = "<group>"; };
 		042631B821E86950000D28BB /* ZFPhotoCollectionController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ZFPhotoCollectionController.h; sourceTree = "<group>"; };
 		042631C521E86A19000D28BB /* PhotoPickerKit.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = PhotoPickerKit.xcassets; sourceTree = "<group>"; };
+		04918D7C2203DAF9002FB5A4 /* ZFAlbumListViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ZFAlbumListViewController.h; sourceTree = "<group>"; };
+		04918D7D2203DAF9002FB5A4 /* ZFAlbumListViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ZFAlbumListViewController.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -216,6 +219,8 @@
 				042631A121E86950000D28BB /* ZFPhotoManager.m */,
 				042631A521E86950000D28BB /* ZFPhotoPickerController.h */,
 				042631B021E86950000D28BB /* ZFPhotoPickerController.m */,
+				04918D7C2203DAF9002FB5A4 /* ZFAlbumListViewController.h */,
+				04918D7D2203DAF9002FB5A4 /* ZFAlbumListViewController.m */,
 				042631B821E86950000D28BB /* ZFPhotoCollectionController.h */,
 				042631A621E86950000D28BB /* ZFPhotoCollectionController.m */,
 				042631B121E86950000D28BB /* ZFPhotoPreviewController.h */,
@@ -359,6 +364,7 @@
 				0426319B21E86942000D28BB /* View+MASAdditions.m in Sources */,
 				042631BC21E86950000D28BB /* ZFPhotoPreviewController.m in Sources */,
 				042631BE21E86950000D28BB /* ZFBottomBar.m in Sources */,
+				04918D7E2203DAF9002FB5A4 /* ZFAlbumListViewController.m in Sources */,
 				042631BD21E86950000D28BB /* ZFPhotoCollectionController.m in Sources */,
 				042631B921E86950000D28BB /* ZFAlbumModel.m in Sources */,
 				0426319521E86942000D28BB /* NSLayoutConstraint+MASDebugAdditions.m in Sources */,

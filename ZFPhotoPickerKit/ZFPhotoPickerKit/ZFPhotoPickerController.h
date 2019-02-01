@@ -82,11 +82,4 @@ NS_ASSUME_NONNULL_BEGIN
 
 @end
 
-
-@interface ZFAlbumListController : UITableViewController
-
-@property (nonatomic, copy)   NSArray *albums;
-
-@end
-
 NS_ASSUME_NONNULL_END
