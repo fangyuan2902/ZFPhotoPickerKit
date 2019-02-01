@@ -119,34 +119,20 @@
     return _imageOrientation;
 }
 
-- (AVPlayerItem *)playerItem {
+- (void)playerItemCompletionBlock:(void (^)(AVPlayerItem *, NSDictionary *))completionBlock {
     if (_playerItem) {
-        return _playerItem;
+        completionBlock(_playerItem, _playerItemInfo);
+        return;
     }
     __block AVPlayerItem *resultItem;
     __block NSDictionary *resultItemInfo;
     [[ZFPhotoManager sharedManager] getVideoInfoWithAsset:self.asset completionBlock:^(AVPlayerItem *playerItem, NSDictionary *playerItemInfo) {
         resultItem = playerItem;
         resultItemInfo = [playerItemInfo copy];
+        completionBlock(playerItem, playerItemInfo);
     }];
     _playerItem = resultItem;
     _playerItemInfo = resultItemInfo ? : _playerItemInfo;
-    return _playerItem;
-}
-
-- (NSDictionary *)playerItemInfo {
-    if (_playerItemInfo) {
-        return _playerItemInfo;
-    }
-    __block AVPlayerItem *resultItem;
-    __block NSDictionary *resultItemInfo;
-    [[ZFPhotoManager sharedManager] getVideoInfoWithAsset:self.asset completionBlock:^(AVPlayerItem *playerItem, NSDictionary *playerItemInfo) {
-        resultItem = playerItem;
-        resultItemInfo = [playerItemInfo copy];
-    }];
-    _playerItem = resultItem ? : _playerItem;
-    _playerItemInfo = resultItemInfo;
-    return _playerItemInfo;
 }
 
 @end

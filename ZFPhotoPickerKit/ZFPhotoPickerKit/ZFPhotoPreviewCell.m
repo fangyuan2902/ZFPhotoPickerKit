@@ -9,7 +9,6 @@
 #import "ZFPhotoPreviewCell.h"
 #import "ZFAssetModel.h"
 #import <AVFoundation/AVFoundation.h>
-#import "ZFPhotoManager.h"
 
 @interface ZFPhotoPreviewCell () <UIScrollViewDelegate>
 
@@ -172,10 +171,8 @@
  */
 - (void)setupPlayer:(ZFAssetModel *)item {
     __weak typeof(self) weakSelf = self;
-    [[ZFPhotoManager sharedManager] getVideoInfoWithAsset:item.asset completionBlock:^(AVPlayerItem *playerItem, NSDictionary *playetItemInfo) {
+    [item playerItemCompletionBlock:^(AVPlayerItem * playerItem, NSDictionary * playetItemInfo) {
         dispatch_async(dispatch_get_main_queue(), ^{
-//            AVURLAsset *videoURLAsset = [AVURLAsset URLAssetWithURL:[NSURL URLWithString:@"http://static.tripbe.com/videofiles/20121214/9533522808.f4v.mp4"] options:nil];
-//            AVPlayerItem *xjPlayerItem = [AVPlayerItem playerItemWithAsset:videoURLAsset];
             weakSelf.player = [AVPlayer playerWithPlayerItem:playerItem];
             AVPlayerLayer *playerLayer = [AVPlayerLayer playerLayerWithPlayer:self.player];
             playerLayer.frame = weakSelf.playView.bounds;
@@ -183,7 +180,7 @@
             [weakSelf setupPlayButton];
             [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(pausePlayer) name:AVPlayerItemDidPlayToEndTimeNotification object:nil];
         });
-    }];    
+    }];
 }
 
 - (void)setupPlayButton {

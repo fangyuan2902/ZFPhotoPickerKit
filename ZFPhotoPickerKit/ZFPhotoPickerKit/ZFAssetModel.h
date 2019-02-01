@@ -22,8 +22,7 @@ NS_ASSUME_NONNULL_BEGIN
 @property (nonatomic, assign, readonly) UIImageOrientation imageOrientation;//获取照片的方向
 
 @property (nonatomic, copy,   readonly) NSString *timeLength;//asset为Video时 video的时长
-@property (nonatomic, strong, readonly) AVPlayerItem *playerItem;//视频的播放item
-@property (nonatomic, copy,   readonly) NSDictionary *playerItemInfo;//视频播放item的信息
+- (void)playerItemCompletionBlock:(void (^)(AVPlayerItem *, NSDictionary *))completionBlock;//视频的播放item
 
 /**
  *  根据asset,type获取ZFAssetModel实例
