@@ -192,7 +192,8 @@
     [playButton setImage:[UIImage imageNamed:@"video_preview_play_normal"] forState:UIControlStateNormal];
     [playButton setImage:[UIImage imageNamed:@"video_preview_play_highlight"] forState:UIControlStateHighlighted];
     [playButton addTarget:self action:@selector(handlePlayAciton) forControlEvents:UIControlEventTouchUpInside];
-    [self.contentView addSubview:self.playButton = playButton];
+    [self.playView addSubview:playButton];
+    self.playButton = playButton;
 }
 
 - (UIView *)playView {

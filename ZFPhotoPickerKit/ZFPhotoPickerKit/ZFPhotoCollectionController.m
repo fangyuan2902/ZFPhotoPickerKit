@@ -17,9 +17,7 @@
 @interface ZFPhotoCollectionController ()
 
 @property (nonatomic, assign) BOOL scrollBottom;
-
 @property (nonatomic, weak)   ZFBottomBar *bottomBar;
-
 @property (nonatomic, copy)   NSArray *assets;
 @property (nonatomic, strong) NSMutableArray *selectedAssets;
 

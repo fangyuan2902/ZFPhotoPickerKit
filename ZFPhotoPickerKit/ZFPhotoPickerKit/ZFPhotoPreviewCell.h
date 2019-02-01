@@ -17,6 +17,8 @@ NS_ASSUME_NONNULL_BEGIN
 
 - (void)configCellWithItem:(ZFAssetModel *)item;
 
+- (void)pausePlayer;
+
 @end
 
 NS_ASSUME_NONNULL_END

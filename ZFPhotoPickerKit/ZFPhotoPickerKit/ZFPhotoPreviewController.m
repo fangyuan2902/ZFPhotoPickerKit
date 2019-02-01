@@ -18,8 +18,8 @@
 
 @property (nonatomic, strong) UIView *topBar;
 @property (nonatomic, weak)   UIButton *stateButton;
-
 @property (nonatomic, strong) ZFBottomBar *bottomBar;
+@property (nonatomic, strong) ZFPhotoPreviewCell *currentPlayingCell;
 
 @end
 
@@ -82,12 +82,12 @@ static NSString * const kZFPhotoPreviewIdentifier = @"ZFPhotoPreviewCell";
     
 }
 
-- (void)_handleBackAction {
+- (void)handleBackAction {
     self.didPreviewFinishBlock ? self.didPreviewFinishBlock(self.selectedAssets) : nil;
     [self.navigationController popViewControllerAnimated:YES];
 }
 
-- (void)_handleStateChangeAction {
+- (void)handleStateChangeAction {
     if (self.stateButton.selected) {
         [self.selectedAssets removeObject:self.assets[self.currentIndex]];
         self.assets[self.currentIndex].selected = NO;
@@ -134,8 +134,11 @@ static NSString * const kZFPhotoPreviewIdentifier = @"ZFPhotoPreviewCell";
 
 - (void)scrollViewDidEndDecelerating:(UIScrollView *)scrollView {
     [self updateTopBarStatus];
+    NSArray *array = [self.collectionView visibleCells];
+    for (ZFPhotoPreviewCell *cell in array) {
+        [cell pausePlayer];
+    }
 }
-
 
 #pragma mark <UICollectionViewDataSource>
 
@@ -179,7 +182,7 @@ static NSString * const kZFPhotoPreviewIdentifier = @"ZFPhotoPreviewCell";
         [backButton setContentEdgeInsets:UIEdgeInsetsMake(0, 10, 0, 10)];
         [backButton sizeToFit];
         backButton.frame = CGRectMake(12, _topBar.frame.size.height/2 - backButton.frame.size.height/2 + originY/2, backButton.frame.size.width, backButton.frame.size.height);
-        [backButton addTarget:self action:@selector(_handleBackAction) forControlEvents:UIControlEventTouchUpInside];
+        [backButton addTarget:self action:@selector(handleBackAction) forControlEvents:UIControlEventTouchUpInside];
         [_topBar addSubview:backButton];
         
         UIButton *stateButton  = [UIButton buttonWithType:UIButtonTypeCustom];
@@ -189,7 +192,7 @@ static NSString * const kZFPhotoPreviewIdentifier = @"ZFPhotoPreviewCell";
         [stateButton sizeToFit];
         stateButton.frame = CGRectMake(_topBar.frame.size.width - 12 - stateButton.frame.size.width, _topBar.frame.size.height/2 - stateButton.frame.size.height/2 + originY/2, stateButton.frame.size.width, stateButton.frame.size.height);
         
-        [stateButton addTarget:self action:@selector(_handleStateChangeAction) forControlEvents:UIControlEventTouchUpInside];
+        [stateButton addTarget:self action:@selector(handleStateChangeAction) forControlEvents:UIControlEventTouchUpInside];
         [_topBar addSubview:self.stateButton = stateButton];
         
     }
